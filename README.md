@@ -22,7 +22,7 @@ Each set of unique sequences or API endpoint tests should be started with new `f
 
 ```javascript
 
-var frisby = require('../lib/frisby');
+var frisby = require('frisby');
 
 var URL = 'http://localhost:3000/';
 var URL_AUTH = 'http://username:password@localhost:3000/';
@@ -63,6 +63,8 @@ frisby.create('GET user johndoe')
 
 Any of the [Jasmine matchers](https://github.com/pivotal/jasmine/wiki/Matchers) can be used inside the `after` and `afterJSON` callbacks to perform additional or custom tests on the response data.
 
+To run only one of the tests, replace `toss` to `ttoss`.
+
 ## Running Tests
 
 Frisby is built on top of the jasmine BDD spec framework, and uses the excellent [jasmine-node test runner](https://github.com/mhevery/jasmine-node) to run spec tests in a specified target directory.  
@@ -81,6 +83,9 @@ Suggested file naming is to append the filename with `_spec`, like `mytests_spec
 
     cd your/project
     jasmine-node .
+    
+### Documentation
+Documentation is hosted at [frisbyjs.com](http://frisbyjs.com/), the documentation pages has separate [repositiory](https://github.com/vlucas/frisby-site).
 
 ## License
 Licensed under the [MIT](http://opensource.org/licenses/MIT)/[BSD](http://opensource.org/licenses/BSD-3-Clause) license.
